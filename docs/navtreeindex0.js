@@ -19,6 +19,7 @@ var NAVTREEINDEX0 =
 "class_dv_g___binary_stream_command.html#aca5f82ec7e046ba316de6a131472d00d":[1,0,0,3],
 "class_dv_g___stream_command.html":[1,0,1],
 "class_dv_g___stream_command.html#aa4999e28ea771e2b06140adf450f022a":[1,0,1,0],
+"class_dv_g___stream_command.html#add330f3bde119052767d735b2dfdf2a7":[1,0,1,3],
 "class_dv_g___stream_command.html#ae8039ac961e5c57b8d542b48399c8bb1":[1,0,1,2],
 "class_dv_g___stream_command.html#af23a069d14501473d413a66da9f5fc5f":[1,0,1,1],
 "classes.html":[1,1],
