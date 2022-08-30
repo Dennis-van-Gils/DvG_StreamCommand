@@ -1,15 +1,14 @@
-/* Example: Listen to the serial port for binary commands and act upon them.
+/** @example BinaryStreamCommand.ino
 
-This demo will simply print all received bytes back to the terminal once a
-complete command has been received, i.e. a byte stream ending in a specific
-order as set by the end-of-line (EOL) sentinel.
+Listen to the serial port for binary commands and act upon them.
+
+A binary command is a byte stream ending in a specific order as set by the
+end-of-line (EOL) sentinel.
 
 For convenience, this demo has the EOL set to '!!' such that you can type these
-ASCII characters in a terminal to terminate the command.
-
-https://github.com/Dennis-van-Gils/DvG_StreamCommand
-Dennis van Gils
-29-08-2022
+ASCII characters in a terminal to terminate the command. This demo will simply
+print all received bytes back to the terminal once a complete command has been
+received.
 */
 
 #include "DvG_StreamCommand.h"

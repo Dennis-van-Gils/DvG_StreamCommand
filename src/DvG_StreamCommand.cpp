@@ -15,8 +15,8 @@
  * @section Usage
  * Method `available()` should be called repeatedly to poll for characters or
  * bytes incoming to the stream. It will return true when a new completely
- * received command is ready to be processed by the user. See @ref ex1 and @ref
- * ex2.
+ * received command is ready to be processed by the user. See the examples @ref
+ * StreamCommand.ino and @ref BinaryStreamCommand.ino.
  *
  * @section author Author
  * Dennis van Gils (vangils.dennis@gmail.com)
@@ -31,12 +31,6 @@
  *
  * @section license License
  * MIT License. See the LICENSE file for details.
- *
- * @section ex1 Example: ASCII commands over Serial
- * @include examples/StreamCommand/StreamCommand.ino
- *
- * @section ex2 Example: Binary commands over Serial
- * @include examples/BinaryStreamCommand/BinaryStreamCommand.ino
  */
 
 #include "DvG_StreamCommand.h"
@@ -198,10 +192,12 @@ float parseFloatInString(const char *str_in, uint16_t pos) {
 
 bool parseBoolInString(const char *str_in, uint16_t pos) {
   if (strlen(str_in) > pos) {
-    return (atoi(&str_in[pos]) == 1 ||               //
-            strncmp(&str_in[pos], "true", 4) == 0 || //
-            strncmp(&str_in[pos], "True", 4) == 0 || //
-            strncmp(&str_in[pos], "TRUE", 4) == 0);
+    if (strncmp(&str_in[pos], "true", 4) == 0 || //
+        strncmp(&str_in[pos], "True", 4) == 0 || //
+        strncmp(&str_in[pos], "TRUE", 4) == 0) {
+      return true;
+    }
+    return (atoi(&str_in[pos]) != 0);
   } else {
     return false;
   }

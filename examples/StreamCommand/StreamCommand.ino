@@ -1,19 +1,14 @@
 /** @example StreamCommand.ino
- */
 
-/* Example: Listen to the serial port for ASCII commands and act upon them.
+Listen to the serial port for ASCII commands and act upon them.
 
-A command is any string ending with a newline '\n' character.
+An ASCII command is any string ending with a newline '\\n' character.
 
 The following demo commands exist:
-  'on'       : Turn onboard LED on.
-  'off'      : Turn onboard LED off.
-  `set ##.##`: Print the passed value back to the terminal, interpreted as a
-               float, integer and boolean.
-
-https://github.com/Dennis-van-Gils/DvG_StreamCommand
-Dennis van Gils
-29-08-2022
+  - 'on'       : Turn onboard LED on.
+  - 'off'      : Turn onboard LED off.
+  - 'set ##.##': Print the passed value back to the terminal, interpreted as a
+float, integer and boolean.
 */
 
 #include "DvG_StreamCommand.h"
@@ -54,7 +49,7 @@ void loop() {
       Serial.print(" As integer: ");
       Serial.println(parseIntInString(str_cmd, 3));
       Serial.print(" As boolean: ");
-      Serial.println(parseBoolInString(str_cmd, 3));
+      Serial.println(parseBoolInString(str_cmd, 3) ? "true" : "false");
 
     } else {
       Serial.println(" Unknown command");
