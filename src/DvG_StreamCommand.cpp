@@ -3,7 +3,7 @@
  * @author  Dennis van Gils (vangils.dennis@gmail.com)
  * @version https://github.com/Dennis-van-Gils/DvG_StreamCommand
  * @version 1.0.0
- * @date    28-08-2022
+ * @date    30-08-2022
  *
  * @mainpage A lightweight Arduino library to listen for commands over a stream.
  *
